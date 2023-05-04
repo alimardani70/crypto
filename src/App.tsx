@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Crypto from './view/pages/Crypto'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  /*
+  const { isLoading, error, sendRequest: getCrypto } = useAxiosGet()
+  useEffect(() => {
+    const applyCrypto = (data: any) => {
+      console.log(data)
+    }
+    getCrypto(
+      'https://api.coingecko.com/api/v3/simple/supported_vs_currencies',
+      applyCrypto
+    )
+  }, [getCrypto])
+  */
+  return <Crypto />
 }
 
-export default App;
+export default App
