@@ -19,7 +19,7 @@ const Category: React.FC<propsType> = ({ onChange }) => {
   const { isLoading, error, sendRequest: getCategories } = useAxiosGet()
   const [categories, setCategories] = useState<categoryType[] | []>([])
 
-    useEffect(() => {
+  useEffect(() => {
     const applyCategories = (data: any) => {
       let allCategories: any = []
       data.map((item: categoryRequestType) => {
@@ -36,7 +36,6 @@ const Category: React.FC<propsType> = ({ onChange }) => {
       applyCategories
     )
   }, [getCategories])
-
 
   const changeHandler = (value: any) => {
     onChange(value)
