@@ -16,6 +16,7 @@ const Table: React.FC<propsType> = ({ data, columns, className }) => {
     headerIds.push(col.id)
     return col.label
   })
+  console.log(data)
   const rowOut = data.map((rowIn: object) => {
     return headerIds.map((id: string) => {
       if (id === 'image' && rowIn.hasOwnProperty('image'))
